@@ -107,22 +107,27 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script> 
     $(document).ready(function(){ 
+      console.log("started JavaScript");
       // do this when click on the click1 button
       $("#click1").click(function() {
         // run this when click on this button
+         console.log("clicked on the first button");
         $("#div_ctr1").html("These are all the materials you need to crochet!");
       });
       // do this when click on the click2 button
       $("#click2").click(function() {
         // run this when click on this button
+         console.log("clicked on the second button");
         $("#div_ctr2").html("You don't need these materials, but they may make your life easier!");
       });
       // toggle photo on and off
       $("#togglePhoto").click(function() {
+         console.log("clicked on the togglePhoto button");
         $("#hatsphoto").toggle();
       });
       //this button reveals a secret message...
       $("#message").click(function() {
+         console.log("clicked on the hiddenText button");
         $("#hiddenText").text("I don't have very much time to crochet anymore, so I am excited for Spring Break to hopefully have some time to work on a project!");
       });
     });
