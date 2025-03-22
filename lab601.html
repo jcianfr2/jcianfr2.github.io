@@ -121,6 +121,10 @@
       $("#togglePhoto").click(function() {
         $("#hatsphoto").toggle();
       });
+      //this button reveals a secret message...
+      $("#message").click(function() {
+        $("#hiddenText").text("I don't have very much time to crochet anymore, so I am excited for Spring Break to hopefully have some time to work on a project!");
+      });
     });
   </script>
     
@@ -252,9 +256,9 @@
         </tr>
       </table>
     </div>
-    </div>
-    <div id = "hiddenText">
+       <div id = "hiddenText">
       <button id = "message">Click here to see the hidden message...</button>
+    </div>
     </div>
   </body>
 </html>
