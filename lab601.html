@@ -110,12 +110,12 @@
       // do this when click on the click1 button
       $("#click1").click(function() {
         // run this when click on this button
-        $("#click1").html("These are all the materials you need to crochet!");
+        $("#div_ctr1").html("These are all the materials you need to crochet!");
       });
-      // do this when click on the click1 button
+      // do this when click on the click2 button
       $("#click2").click(function() {
         // run this when click on this button
-        $("#click2").html("You don't need these materials, but they may make your life easier!");
+        $("#div_ctr2").html("You don't need these materials, but they may make your life easier!");
       });
     });
   </script>
@@ -155,7 +155,7 @@
     <p>There are a few materials that are necessary in any crochet project, and some that are not mandatory, but can make your crocheting experience easier.</p>
   
     <div id = "necessary">
-    <h3><button id = "click1"> Neccesary Materials </button></h3>
+    <h3> <div id = "div_ctr1"> <button id = "click1"> Neccesary Materials </button> </div> </h3>
       <ul>
         <li>Yarn</li>
         <li>Crochet hook</li>
@@ -165,7 +165,7 @@
     </div>
     
     <div id = "optional">
-    <h3><button id = "click2"> Optional Materials </button></h3>
+    <h3> <div id = "div_ctr2"> <button id = "click2"> Optional Materials </button> </div> </h3>
       <ul>
         <li>Stitch markers</li>
         <li>Measuring tape</li>
