@@ -106,8 +106,12 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script> 
-    $(document).ready(function(){
-      
+    $(document).ready(function(){ 
+      // do this when click on the click1 button
+      $("#click1").click(function() {
+        // run this when click on this button
+        $("#click1").html("These are all the materials you need to crochet!");
+      });
     });
   </script>
     
@@ -167,6 +171,7 @@
     </div>
   </div>
   <div>
+    
     <h2>Yarn Selection</h2>
     <p>Selecting your yarn is one of the most important steps in a crochet project. The weight and material of the yarn have a big impact
       on the look and feel of your project. Yarn weight refers to the thickness of the yarn, and there are eight major categories. The following
