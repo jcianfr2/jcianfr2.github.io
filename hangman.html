@@ -18,8 +18,8 @@
     <script>
          $(document).ready( function() {
               // this is the secret word!
-              word =  "y o u r w o r d";
-              blank = "- - - - - - - -";
+              word =  "l i m n o l o g y";
+              blank = "- - - - - - - - -";
               $("#word").text(blank);
 
               // this is the list of letters that have been tried
@@ -99,6 +99,8 @@
 
                     // add the letter to letters already tried
                     triedLetters = triedLetters + letter;
+                    console.log("triedLetters is ", triedLetters);
+                    console.log("word is ", word);
   
 
                   }
