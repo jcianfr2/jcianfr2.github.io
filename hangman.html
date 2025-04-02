@@ -58,8 +58,8 @@
                     } else if (! word.includes(letter)) {
 
                       // reduce the number of remaining tries by 1
-                      tried = tried - 1;
-                      $("#guesses").text("Mistakes, left: " + tried);
+                      tries = tries - 1;
+                      $("#guesses").text("Mistakes, left: " + tries);
 
                       // are they out of tries? then they lost!
                       if (tries < 1) {
