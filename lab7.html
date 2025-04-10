@@ -7,7 +7,7 @@
      crossorigin=""/>
 
     <style> 
-      #map { height: 180px; }
+      #map { height: 500px; }
     </style>
     
   </head>
@@ -25,12 +25,12 @@
           maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           }).addTo(map);
         
-      var marker = L.marker([48.73412, -122.48417]).addTo(map);
+      var marker = L.marker([48.73446, -122.48846]).addTo(map);
       var circle = L.circle([48.74996, -122.47885], {
-        color: 'red',
-        fillColor: '#f03',
+        color: '#00a2ff',
+        fillColor: '#00a2ff',
         fillOpacity: 0.5,
-        radius: 500
+        radius: 600
       }).addTo(map);
       var polygon = L.polygon([
         [51.509, -0.08],
