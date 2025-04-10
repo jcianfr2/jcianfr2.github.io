@@ -26,6 +26,7 @@
           }).addTo(map);
         
       var marker = L.marker([48.73446, -122.48846]).addTo(map);
+      var markerWork = L.marker([48.767794, -122.484266]).addTo(map);
       var circle = L.circle([48.74996, -122.47885], {
         color: '#00a2ff',
         fillColor: '#00a2ff',
@@ -43,6 +44,7 @@
       ]).addTo(map);
 
       marker.bindPopup("This is the school I went to, Western Washington University");
+      markerWork.bindPopup("This is the grocery store I worked at during 2021 and 2022.");
       circle.bindPopup("This is the area of Downtown Bellingham, where there are lots of good restaurants, shops, and bars!");
       polygon.bindPopup("This is Whatcom Falls Park, one of my favorite parks/nature areas to visit.");
 
