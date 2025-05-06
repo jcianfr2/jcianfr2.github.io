@@ -18,7 +18,7 @@
 			margin: 0;
 		}
 		
-		#map { width:80%; height: 70%; }
+		#map { width:90%; height: 80%; alignment:center;}
 		
 		h1 { color: #005824;
 		     font-family: "Garamond", serif;
@@ -56,10 +56,10 @@
 
 	$(document).ready(function() {
 
-		// let's create our basemap! -- ##1 here
+		//create the basemap
     		map = L.map('map').setView([0,0], 11);
 		
-		// let's add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
+		//add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -71,12 +71,12 @@
 			maxZoom: 19,
 			attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'});
 
-		// this is an object to keep track of our three basemaps -- ##2 here
+		// this is an object to keep track of the three basemaps
 		var baseMaps = {"OpenStreetMap" : OSMTiles,
                     "Humanitarian OSM" : HOTOSMTiles,
                     "OpenTopoMap" : OpenTopoMap};
 
-		// the control let's the user turn on / off layers -- ##3 here
+		// the control let's the user turn on / off layers
 		var layerControl = L.control.layers(baseMaps, null).addTo(map);
 
     // define a function to style my choropleth map
@@ -101,7 +101,7 @@
 	return styleReturn;
     }
 
-		// let's add the Denver ACS data -- ##4 here
+		// add the Seattle ACS data
 		$.getJSON('./neighborhood_map_layers_-495755960976148848.geojson', function(data) {
 			// convert the file into a layer
 			acsSeattle = L.geoJSON(data,
@@ -143,8 +143,9 @@
 
 
 <div id="header">
-	<h1><a href="https://www.census.gov/programs-surveys/acs">Percentage of the Denver Population Under the Age of 18 in 2021</a></h1>
-	<p>Data from <a href="https://opendata-geospatialdenver.hub.arcgis.com/maps/619c7f836b6e4188b0e0f0458aecba26">Denver Open Data Catalog</a></p>
+	<h1>Percentage of the Workers In Seattle Who Take Public Transportation to Work</h1>
+	<p>Data from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS:
+								 :seattle-neighborhoods-top-50-american-community-survey-data/about">Seattle GeoData Catalog</a></p>
 </div>
 <div id="map"></div>
 
