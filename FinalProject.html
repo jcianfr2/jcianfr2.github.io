@@ -81,7 +81,7 @@
 
     // define a function to style my choropleth map
     function style1 (feature) {
-      d = feature.properties.PCT_AGELESS18;
+      d = feature.properties.PUBLIC_TRANSPORTATION_PERCENT;
       answer = d > 30 ? '#005824' :
         			d > 25 ? '#238b45' :
        			 	d > 20 ? '#41ae76' :
@@ -107,7 +107,7 @@
 			acsSeattle = L.geoJSON(data,
                                      {style:style1,
 																		 onEachFeature: function(feature, layer) {
-																			 layer.bindPopup("Percent of Population Under 18:);
+																			 layer.bindPopup("Percent of Workers Taking Public Transport: " + feature.properties.PUBLIC_TRANSPORTATION_PERCENT + "%");
 																		 }}).addTo(map);
 
 			// move the map to the area of the data
