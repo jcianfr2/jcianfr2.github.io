@@ -18,7 +18,7 @@
 			margin: 0;
 		}
 		
-		#map { width:90%; height: 80%; text-alignt:center;}
+		#map { width:90%; height: 80%; text-align:center;}
 		
 		h1 { color: #005824;
 		     font-family: "Garamond", serif;
@@ -60,25 +60,11 @@
 		//create the basemap
     		map = L.map('map').setView([0,0], 11);
 		
-		//add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
+		//add OSM background tiles
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
-		var HOTOSMTiles = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-			maxZoom: 19,
-    			attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'});
-		var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-			maxZoom: 19,
-			attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'});
-
-		// this is an object to keep track of the three basemaps
-		var baseMaps = {"OpenStreetMap" : OSMTiles,
-                    "Humanitarian OSM" : HOTOSMTiles,
-                    "OpenTopoMap" : OpenTopoMap};
-
-		// the control let's the user turn on / off layers
-		var layerControl = L.control.layers(baseMaps, null).addTo(map);
 
     // define a function to style my choropleth map
     function style1 (feature) {
