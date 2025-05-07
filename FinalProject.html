@@ -20,8 +20,10 @@
 		
 		#map { width:90%; 
 					height: 80%;
-				  display: inline-block;
-					vertical-align: center;
+				  position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
 				 }
 		
 		h1 { color: #20093d;
@@ -30,9 +32,15 @@
 		     text-align: center;
 		    }
 		
+		h2 { color: #452d63;
+				 font: verdana;
+				 font-size: 20px;
+				 text-align: left;
+		}
+		
 		p { font: verdana; 
-				font-size: 10px;
-		    color: #452b66;
+				font-size: 16px;
+		    color: #5e4380;
 		  }
 		
 		#header {
@@ -151,9 +159,10 @@
 <div id="header">
 	<h1>Public Transportation In Seattle</h1>
 </div>
+<h2>Map Displaying The Percentage of Workers in Seattle Who Take Public Transportation To Work</h2>
 <div id="map"></div>
 <p>Data from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::seattle-neighborhoods-top-50-american-community-survey-data/about">Seattle GeoData Catalog</a></p>
-
+<h2>More About Public Transportation In Seattle</h2>
 
 </body>
 </html>
