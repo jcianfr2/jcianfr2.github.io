@@ -18,17 +18,21 @@
 			margin: 0;
 		}
 		
-		#map { width:90%; height: 80%;}
+		#map { width:90%; 
+					height: 80%;
+				  display: inline-block;
+					vertical-align: center;
+				 }
 		
-		h1 { color: #005824;
-		     font-family: "Garamond", serif;
-		     font-size: 20px;
+		h1 { color: #20093d;
+		     font: Verdana ;
+		     font-size: 40px;
 		     text-align: center;
 		    }
-		h3 { text-align: center;
-			}
-		p { font: serif 10px;
-		    color: #66c2a4;
+		
+		p { font: verdana; 
+				font-size: 10px;
+		    color: #452b66;
 		  }
 		
 		#header {
@@ -37,8 +41,11 @@
 			align: center;
 		}
 		
-		a { text-decoration: none; color: inherit; }
+		a { text-decoration: none; 
+			 color: inherit; }
 
+		 a:hover {color: #20093d;}
+		
     .legend {
       line-height: 18px;
       color: #000000;
@@ -142,10 +149,10 @@
 
 
 <div id="header">
-	<h1>Percentage of the Workers In Seattle Who Take Public Transportation to Work</h1>
-	<p>Data from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::seattle-neighborhoods-top-50-american-community-survey-data/about">Seattle GeoData Catalog</a></p>
+	<h1>Public Transportation In Seattle</h1>
 </div>
 <div id="map"></div>
+<p>Data from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::seattle-neighborhoods-top-50-american-community-survey-data/about">Seattle GeoData Catalog</a></p>
 
 
 </body>
