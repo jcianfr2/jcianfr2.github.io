@@ -18,7 +18,7 @@
 			margin: 0;
 		}
 		
-		#map { width:90%; height: 80%; text-align:center;}
+		#map { width:90%; height: 80%;}
 		
 		h1 { color: #005824;
 		     font-family: "Garamond", serif;
@@ -60,7 +60,7 @@
 		//create the basemap
     		map = L.map('map').setView([0,0], 11);
 		
-		//add OSM background tiles
+		//add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -76,20 +76,18 @@
 		var baseMaps = {"OpenStreetMap" : OSMTiles,
                     "Humanitarian OSM" : HOTOSMTiles,
                     "OpenTopoMap" : OpenTopoMap};
+		
 		//add layer control
 		var layerControl = L.control.layers(baseMaps, null).addTo(map);
 
     // define a function to style my choropleth map
     function style1 (feature) {
-      d = feature.properties.PUBLIC_TRANSPORTATION_PERCENT;
-      answer = d > 30 ? '#005824' :
-        			d > 25 ? '#238b45' :
-       			 	d > 20 ? '#41ae76' :
-        			d > 15 ? '#66c2a4' :
-							d > 10 ? '#99d8c9' :
-							d > 4 ? '#ccece6' :
-							d > 1 ? '#edf8fb' :
-							'white';
+      p = feature.properties.PUBLIC_TRANSPORTATION_PERCENT;
+      answer = p > 20 ? '#54278f' :
+        			p > 17 ? '#756bb1' :
+       			 	p > 14 ? '#9e9ac8' :
+        			p > 11.9 ? '#cbc9e2'
+							'#f2f0f7';
       styleReturn = {
 				fillColor : answer,
 				weight : 1,
@@ -114,7 +112,7 @@
 			map.panTo(acsSeattle.getBounds().getCenter());
 
 			// add the layer to the layercontrol
-			layerControl.addOverlay(acsSeattle, "Census 2021");
+			layerControl.addOverlay(acsSeattle, "Seattle Census");
 		});
 		
 
@@ -122,8 +120,8 @@
     var legend = L.control({position: 'bottomright'});
     legend.onAdd = function(map) {
       var div = L.DomUtil.create('div', 'info legend');
-      colors = ['white','#edf8fb','#ccece6','#99d8c9','#66c2a4','#41ae76','#238b45','#005824'];
-      labels = ['0 - 1%','1 - 4%','4 - 10%','10 - 15%','15 - 20%','20 - 25%','25 - 30%','30%+'];
+      colors = ['#f2f0f7','#cbc9e2','#9e9ac8','#756bb1','#54278f'];
+      labels = ['less than 12%','12-14%','14-17%','17-20%','greater than 20%'];
       div.innerHTML = '<h3>% Population Under 18</h3>';
 
       for (var i = 0; i < colors.length; i++) { //i = i+1
