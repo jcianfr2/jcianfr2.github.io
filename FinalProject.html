@@ -144,12 +144,19 @@
 
     legend.addTo(map);
 
-		$("#busPhoto").hide();
+		$("#busPhoto, #railPhoto, #ferryPhoto").hide();
 		
 		$("#bus").click(function(){
 			$("#busPhoto").show();
 		});
 
+		$("#rail").click(function(){
+			$("#railPhoto").show();
+		});
+
+		$("#ferry").click(function(){
+			$("#ferryPhoto").show();
+		});
 	// end document ready
 	});
 
@@ -171,10 +178,22 @@
 <div>
 	<h2>More About Public Transportation In Seattle</h2>
 	<p>Seattle offers multiple different forms of public transportation, including bus, rail, and boat.</p>
+	
 	<div id = "bus">
 		<img id = "busPhoto" src = "seattleBus.jpeg" />
 		<button id = "toggleBusPhoto"> Bus </button>
 	</div>
+
+	<div id = "rail">
+		<img id = "railPhoto" src = "SeattleRail.jpeg" />
+		<button id = "toggleRailPhoto"> Rail </button>
+	</div>
+
+	<div id = "ferry">
+		<img id = "ferryPhoto" src = "SeattleFerry2.jpeg" />
+		<button id = "toggleFerryPhoto"> Ferry </button>
+	</div>
+	
 </div>
 </body>
 </html>
