@@ -105,8 +105,7 @@
 			acsSeattle = L.geoJSON(data,
                                      {style:style1,
 																		 onEachFeature: function(feature, layer) {
-																			 layer.bindPopup("Percent of Workers Taking Public Transport: " + feature.properties.PUBLIC_TRANSPORTATION_PERCENT + "%" \n
-																											 "Neighborhood Name: " + feature.properties.NEIGH_NAME);
+																			 layer.bindPopup("Percent of Workers Taking Public Transport: " + feature.properties.PUBLIC_TRANSPORTATION_PERCENT + "% \n Neighborhood Name: " + feature.properties.NEIGH_NAME);
 																		 }}).addTo(map);
 
 			// move the map to the area of the data
