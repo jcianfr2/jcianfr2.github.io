@@ -33,7 +33,7 @@
 		h2 { color: #452d63;
 				 font: verdana;
 				 font-size: 20px;
-				 text-align: left;
+				 text-align: center;
 		}
 		
 		p { font: verdana; 
@@ -172,7 +172,7 @@
 
 		$("#busPhoto, #railPhoto, #ferryPhoto").hide();
 		
-		$("#toggleBusPhoto").click(function(){
+		$("#bus").click(function(){
 			$("#busPhoto").toggle();
 		});
 
@@ -203,21 +203,14 @@
 </div>
 <div>
 	<h2>More About Public Transportation In Seattle</h2>
-	<p>Seattle offers multiple different forms of public transportation, including <button id = "toggleBusPhoto"> Bus </button>, rail, and ferry.</p>
-	
+	<p>Seattle offers multiple different forms of public transportation, including <button id = "bus"> Bus </button>, 
+		<button id = "rail"> Rail </button>, and <button id = "ferry"> Ferry. </button> </p>
 	
 	<img id = "busPhoto" src = "seattleBus.jpeg" />
 	
+	<img id = "railPhoto" src = "SeattleRail.jpeg" />
 
-	<div id = "rail">
-		<img id = "railPhoto" src = "SeattleRail.jpeg" />
-		<button id = "toggleRailPhoto"> Rail </button>
-	</div>
-
-	<div id = "ferry">
-		<img id = "ferryPhoto" src = "SeattleFerry2.jpeg" />
-		<button id = "toggleFerryPhoto"> Ferry </button>
-	</div>
+	<img id = "ferryPhoto" src = "SeattleFerry2.jpeg" />
 	
 </div>
 </body>
