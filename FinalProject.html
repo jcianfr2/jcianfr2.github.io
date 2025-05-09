@@ -16,7 +16,7 @@
 		html, body {
 			height: 100%;
 			margin: 0;
-			background-color: #f8f2ff;
+			background-color: #faf6ff;
 		}
 		
 		#map {width: 80%;
@@ -82,6 +82,9 @@
 			content: "";
 			clear: both;
 			display: table;
+		}
+		#more{
+			text-align: left;
 		}
 	</style>
 
@@ -195,7 +198,7 @@
 <div id = "source">
 	<p>Data from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::seattle-neighborhoods-top-50-american-community-survey-data/about">Seattle GeoData Catalog</a></p>
 </div>
-<div>
+<div id = "more">
 	<h2>More About Public Transportation In Seattle</h2>
 	<p>Seattle offers multiple different forms of public transportation, including <button id = "bus"> Bus </button>, 
 		<button id = "rail"> Rail </button>, and <button id = "ferry"> Ferry. </button> </p>
@@ -211,7 +214,7 @@
 		<img id = "ferryPhoto" src = "SeattleFerry2.jpeg" style="width:100%"/>
 	</div>
 </div>
-	
+	<p>Click <a href="https://www.seattle.gov/transportation/getting-around/transit">HERE</a>to learn more about Seattle's public transportation system.</p>
 </div>
 </body>
 </html>
