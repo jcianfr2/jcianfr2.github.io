@@ -67,7 +67,7 @@
     }
 		#source {
 			text-align: right;
-			margin-right: 20%;
+			margin-right: 10%;
 		}
 		
 		#busPhoto {
@@ -92,6 +92,16 @@
 			width: 600px;
 			margin-left: auto;
 			margin-right: auto;
+		}
+		.column {
+			float: left;
+			width: 33.33%;
+			padding: 5px;
+		}
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
 		}
 	</style>
 
@@ -209,12 +219,18 @@
 	<h2>More About Public Transportation In Seattle</h2>
 	<p>Seattle offers multiple different forms of public transportation, including <button id = "bus"> Bus </button>, 
 		<button id = "rail"> Rail </button>, and <button id = "ferry"> Ferry. </button> </p>
-	
-	<img id = "busPhoto" src = "seattleBus.jpeg" />
-	
-	<img id = "railPhoto" src = "SeattleRail.jpeg" />
 
-	<img id = "ferryPhoto" src = "SeattleFerry2.jpeg" />
+<div class = "row">
+	<div class = "column">
+		<img id = "busPhoto" src = "seattleBus.jpeg" />
+	</div>
+	<div class = "column">
+		<img id = "railPhoto" src = "SeattleRail.jpeg" />
+	</div>
+	<div class = "column">
+		<img id = "ferryPhoto" src = "SeattleFerry2.jpeg" />
+	</div>
+</div>
 	
 </div>
 </body>
