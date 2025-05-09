@@ -171,6 +171,7 @@
 		$("#busPhoto, #railPhoto, #ferryPhoto").hide();
 		
 		$("#toggleBusPhoto").click(function(){
+			 console.log("clicked on the first button");
 			$("#bus").toggle();
 		});
 
@@ -201,7 +202,7 @@
 </div>
 <div>
 	<h2>More About Public Transportation In Seattle</h2>
-	<p>Seattle offers multiple different forms of public transportation, including <button id = "toggleBusPhoto"> Bus </button>, rail, and ferry.</p>
+	<p>Seattle offers multiple different forms of public transportation, including <div id = "busButton"> <button id = "toggleBusPhoto"> Bus </button> </div>, rail, and ferry.</p>
 	
 	<div id = "bus">
 		<img id = "busPhoto" src = "seattleBus.jpeg" />
